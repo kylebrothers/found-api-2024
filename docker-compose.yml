@@ -9,6 +9,13 @@ services:
     restart: unless-stopped
     volumes:
       - python-kfc_data:/home/jovyan/KFC
+    deploy:
+      resources:
+        reservations:
+          devices:
+            - driver: nvidia
+              count: 1
+              capabilities: [gpu]
 
 volumes:
   python-kfc_data:

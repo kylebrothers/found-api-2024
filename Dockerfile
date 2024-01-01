@@ -40,6 +40,7 @@ RUN useradd -m docker && \
     echo '%sudo ALL=(ALL) NOPASSWD: ALL' >> /etc/sudoers && \
     cp /root/.bashrc /home/docker/ && \
     mkdir /home/docker/data && \
+    mkdir /home/docker/data/KFC && \
     chown -R --from=root docker /home/docker
 
 # Use C.UTF-8 locale to avoid issues with ASCII encoding

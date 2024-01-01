@@ -1,4 +1,4 @@
-FROM jupyter/base-notebook:python-3.8.8
+FROM tensorflow/tensorflow:2.7.0-gpu-jupyter
 
 COPY requirements.txt /docker_build/requirements.txt
 RUN pip install -r /docker_build/requirements.txt

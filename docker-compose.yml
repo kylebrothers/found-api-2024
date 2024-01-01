@@ -1,0 +1,18 @@
+version: "3"
+
+services:
+  python-kfc:
+    container_name: python-kfc
+    image: kylebrothers/found-api-2024:latest
+    ports:
+      - 8888:8888
+    restart: unless-stopped
+    volumes:
+      - python-kfc_data:/KFC
+
+volumes:
+  python-kfc_data:
+    driver_opts:
+      type: nfs
+      device: ":/Docker/python-kfc/data"
+      o: nfsvers=4,addr=192.168.0.134,nolock,soft,rw

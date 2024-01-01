@@ -8,7 +8,7 @@ services:
       - 8888:8888
     restart: unless-stopped
     volumes:
-      - python-kfc_data:/KFC
+      - python-kfc_data:/home/docker/data/KFC
 
 volumes:
   python-kfc_data:
